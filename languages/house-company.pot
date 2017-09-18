@@ -1,0 +1,99 @@
+# Copyright (C) 2015 Sami Keijonen
+# This file is distributed under the GNU General Public License v2.0 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: House Company 1.0.0\n"
+"Report-Msgid-Bugs-To: https://foxland.fi/contact/\n"
+"POT-Creation-Date: 2015-10-23 07:37:18+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.0\n"
+"Language: en_US\n"
+
+#: functions.php:77
+#. Translators: The %s is the post title shown to screen readers.
+msgid "Visit site %s"
+msgstr ""
+
+#: inc/customizer.php:19
+msgid "Partner page"
+msgstr ""
+
+#: inc/customizer.php:20
+msgid "Select page which you want to get partners content and child pages content."
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Select partner page"
+msgstr ""
+
+#: misc/content-featured-areas.php:95 misc/content-featured-areas.php:100
+#: misc/content-featured-areas.php:101
+msgid "Articles"
+msgstr ""
+
+#: misc/content-featured-areas.php:159
+msgid ""
+"Set Front Page Template content in the Customizer. Or <a "
+"href=\"%1$s\">publish your first post here</a>."
+msgstr ""
+
+#: pages/front-page.php:23
+msgid "Scroll to Content"
+msgstr ""
+
+#: template-parts/content-portfolio_project.php:67
+msgid "We apologize but we could not get the houses. Try again in a minute."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "House Company"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://housecompany.fi/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Theme for housecompany.fi site."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Sami Keijonen"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://foxland.fi/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Front Page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Houses"
+msgstr ""
+
+#: functions.php:98
+#. translators: If there are characters in your language that are not supported
+#. by Lato, translate this to 'off'. Do not translate into your own language.
+msgctxt "Lato font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:103
+#. translators: If there are characters in your language that are not supported
+#. by Montserrat, translate this to 'off'. Do not translate into your own
+#. language.
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr ""
+
+#: sidebar-footer.php:12
+msgctxt "Sidebar aria label"
+msgid "Footer Sidebar"
+msgstr ""

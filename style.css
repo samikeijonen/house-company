@@ -1,0 +1,513 @@
+/**
+Theme Name:  House Company
+Theme URI:   http://housecompany.fi/
+Description: Theme for housecompany.fi site.
+Version: 1.0.0
+Author:      Sami Keijonen
+Author URI:  https://foxland.fi/
+Text Domain: house-company
+Domain Path: /languages/
+Tags:        white, light, one-column
+License:     GNU General Public License v2.0 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template:    munsa
+ */
+
+/**
+ * Parent theme styles are loaded automatically. So there is no need to use @import rule.
+ *
+ * I have collected all the fonts, backgrounds, colors and borders at the bottom of Toivo Lite theme's `style.css`.
+ * The things available to be overwritten are labeled as the "Child theme friendly zone".
+ * You can copy and use those as a starting point when creating your custom child theme.
+ *
+ */
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: Lato, sans-serif;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 1.65;
+}
+
+.featured-content .entry-outer {
+	background-color: transparent;
+}
+
+.attachment-munsa-smaller {
+	border-radius: 0;
+}
+
+.portfolio-posts-wrapper {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+
+.portfolio-posts-wrapper > * {
+	width: 100%;
+}
+
+.portfolio-posts-wrapper .entry {
+	overflow: hidden;
+}
+.portfolio-posts-wrapper .entry img {
+   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter ….3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+	min-height: 300px;
+	position: relative;
+	transition: all 0.4s ease-in-out;
+}
+
+.portfolio-posts-wrapper .entry img:hover,
+.portfolio-posts-wrapper .entry img:focus,
+.portfolio-posts-wrapper .entry img:active {
+	filter: none;
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+.child-page  {
+	text-align: center;
+}
+
+@media screen and (min-width: 60em) {
+
+	.portfolio-posts-wrapper {
+		margin-left: -30px;
+		-webkit-align-items: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+
+	.portfolio-posts-wrapper {
+		-webkit-align-items: flex-start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+	}
+
+	.portfolio-posts-wrapper > * {
+		padding-left: 30px;
+		width: 50%;
+	}
+
+	.child-page  {
+		text-align: left;
+	}
+
+	.child-page .post-thumbnail {
+		width: 38%;
+		max-width: 285px;
+	}
+
+}
+
+.partners-area {
+	margin-top: 60px;
+}
+
+.scroll-to-content:before {
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 50%;
+	color: #000;
+	display: inline-block;
+	padding-top: 3px;
+	padding-left: 3px;
+	width: 40px;
+	height: 40px;
+}
+
+.scroll-to-content:hover::before,
+.scroll-to-content:active::before,
+.scroll-to-content:focus::before {
+	-webkit-animation-duration: 1350ms;
+	animation-duration: 1350ms;
+}
+
+.sidebar-footer .munsa-contact-info,
+.sidebar-footer .contact-info-list,
+.sidebar-footer .widget:nth-child(3) {
+	text-align: center;
+}
+.sidebar-footer .contact-info-link:before {
+	display: block;
+	font-size: 32px;
+	margin-right: 0;
+}
+.contact-info-list li,
+.contact-info-list a {
+	font-size: 0.85rem;
+}
+
+.sidebar-footer {
+	padding-top: 0;
+}
+
+.menu-social {
+	padding-top: 3.6em;
+	padding-bottom: 3.6em;
+	text-align: center;
+}
+
+.site-footer .menu-social {
+	display: none;
+}
+
+@media screen and (min-width: 60em) {
+
+	.menu-social {
+		padding-left: 1.8em;
+	}
+
+}
+
+.logo-wrapper {
+	margin: 0 auto;
+	max-width: 668px;
+	position: relative;
+}
+
+.house-company-logo {
+	display: none;
+	max-width: 150px;
+	padding: 0;
+}
+
+.page-template-front-page .house-company-logo {
+	display: block;
+	max-width: 300px;
+}
+
+.site-title {
+	margin-bottom: 0;
+}
+
+.page-template-front-page .site-title {
+	display: none;
+}
+
+.page-template-front-page .site-content {
+	margin-top: -10rem;
+	position: relative;
+}
+
+.single-house .logo-wrapper,
+.single-house .post-navigation {
+	display: none;
+}
+
+.work-image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.work-image-fi,
+.work-image-skvl {
+	max-width: 150px;
+}
+
+.work-image-fi,
+.work-image-flag {
+	margin-bottom: 1.8em;
+}
+
+.work-image-flag {
+	max-width: 75px;
+}
+
+/* Main nav and header. */
+.page-template-front-page.primary-menu-sidebar-active .site-header {
+	float: none;
+	position: absolute;
+	top: 60px;
+	left: calc(50% - 150px);
+}
+
+.menu-sidebar-toggle:before {
+	margin-bottom: 1px;
+}
+
+@media screen and (min-width: 55.75em) {
+	.main-navigation-toggle {
+		display: none;
+	}
+
+	.js .main-navigation {
+		background-color: transparent;
+		display: block;
+		opacity: 1;
+		padding-left: 1rem;
+		padding-right: 0;
+		position: absolute;
+		left: auto;
+		top: 32px;
+		right: 5%;
+		bottom: auto;
+		width: 60%;
+	}
+
+	.js .admin-bar .main-navigation {
+		top: 64px;
+	}
+
+	.main-navigation a {
+		font-size: 0.875rem;
+	}
+
+	.js .main-navigation .wrap {
+		max-width: none;
+		width: auto;
+		height: auto;
+	}
+
+	.js .admin-bar .main-navigation .wrap > .primary-menu-container,
+	.js .main-navigation .wrap > .primary-menu-container {
+		display: block;
+		padding: 0;
+		width: auto;
+		height: auto;
+	}
+
+	.js .main-navigation ul.menu {
+		display: block;
+		opacity: 1;
+		text-align: right;
+		transform: none;
+	}
+
+	.js .main-navigation ul.menu li {
+		display: inline-block;
+		margin-right: 1em;
+	}
+
+	.js .main-navigation ul.menu li:last-child {
+		margin-right: 0;
+	}
+
+	.primary-menu-sidebar-active .site-header {
+		float: left;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		text-align: left;
+		width: 30%;
+	}
+
+	.page-template-front-page.primary-menu-sidebar-active .site-header {
+		float: none;
+		position: absolute;
+		top: 40px;
+		left: 5%;
+	}
+}
+
+/* Insta. */
+.insta-feed-section {
+	border-top: 2px solid #dedede;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 1.8rem;
+}
+
+.insta-feed-section .insta-feed-wrapper {
+	width: 50%;
+}
+
+@media screen and (min-width: 55.75em) {
+
+	.insta-feed-section .insta-feed-wrapper {
+		width: 25%;
+	}
+
+}
+
+.insta-feed-section .insta-title {
+	text-align: center;
+	width: 100%;
+}
+
+
+.insta-feed-wrapper .entry-inner-bg {
+	background-color: #000;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	position: relative;
+	overflow: hidden;
+}
+
+.insta-feed-wrapper .entry-inner-bg > .bg-wrapper {
+	height: 0;
+	padding-bottom: 100%;
+}
+
+.insta-feed-wrapper .entry-inner-bg a {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-decoration: none;
+	transition: all 0.45s;
+}
+
+.insta-feed-wrapper .entry-inner-bg a:hover,
+.insta-feed-wrapper .entry-inner-bg a:focus,
+.insta-feed-wrapper .entry-inner-bg a:active {
+background-color: rgba(0, 0, 0, 0.5);
+}
+
+.insta-feed-wrapper .entry-inner-bg .entry-header {
+	position: absolute;
+	left: 1rem;
+	bottom: 1rem;
+}
+
+.icon {
+	display: inline-block;
+	fill: currentColor;
+	position: relative;
+	top: -.0625em;
+	vertical-align: middle;
+	width: 1em;
+	height: 1em;
+}
+
+/* Slider */
+.slider-images-wrapper {
+	min-height: 100vh;
+}
+
+.slider-images-wrapper .slick-slide {
+	min-height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}

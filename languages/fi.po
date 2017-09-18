@@ -1,0 +1,129 @@
+# Copyright (C) 2015 Sami Keijonen
+# This file is distributed under the GNU General Public License v2.0 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: House Company 1.0.0\n"
+"Report-Msgid-Bugs-To: https://foxland.fi/contact/\n"
+"POT-Creation-Date: 2015-11-25 09:23+0200\n"
+"PO-Revision-Date: 2015-11-25 09:24+0200\n"
+"Last-Translator: Sami Keijonen <sami.keijonen@foxnet.fi>\n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Translators: The %s is the post title shown to screen readers.
+#: functions.php:77
+msgid "Visit site %s"
+msgstr "Vieraile sivulla %s"
+
+#: inc/customizer.php:19
+msgid "Partner page"
+msgstr "Yhteistyökumppani-sivu"
+
+#: inc/customizer.php:20
+msgid ""
+"Select page which you want to get partners content and child pages content."
+msgstr ""
+"Valitse sivu, josta haetaan yhteistyökumppaneiden sisältö myös sen "
+"alasivuista."
+
+#: inc/customizer.php:45
+msgid "Select partner page"
+msgstr "Valitse Yhteistyökumppani-sivu"
+
+#: misc/content-featured-areas.php:95 misc/content-featured-areas.php:100
+#: misc/content-featured-areas.php:101
+msgid "Articles"
+msgstr "Artikkelit"
+
+#: misc/content-featured-areas.php:159
+msgid ""
+"Set Front Page Template content in the Customizer. Or <a href=\"%1$s"
+"\">publish your first post here</a>."
+msgstr ""
+"Aseta etusivun asetukset mukauttimessa. Tai <a href=\"%1$s\">julkaise "
+"ensimmäinen artikkeli täällä</a>."
+
+#: pages/front-page.php:23
+msgid "Scroll to Content"
+msgstr "Siirry sisältöön"
+
+#: template-parts/content-portfolio_project.php:67
+msgid "We apologize but we could not get the houses. Try again in a minute."
+msgstr ""
+"Pahoittelut mutta emme löytäneet asuntoja. Koita hetken päästä uudelleen."
+
+#. Theme Name of the plugin/theme
+msgid "House Company"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://housecompany.fi/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Theme for housecompany.fi site."
+msgstr "Teema housecompany.fi sivuille."
+
+#. Author of the plugin/theme
+msgid "Sami Keijonen"
+msgstr "Sami Keijonen"
+
+#. Author URI of the plugin/theme
+msgid "https://foxland.fi/"
+msgstr "https://foxland.fi/"
+
+#. Template Name of the plugin/theme
+msgid "Front Page"
+msgstr "Etusivu"
+
+#. Template Name of the plugin/theme
+msgid "Houses"
+msgstr "Kohteet"
+
+#. translators: If there are characters in your language that are not supported
+#. by Lato, translate this to 'off'. Do not translate into your own language.
+#: functions.php:98
+msgctxt "Lato font: on or off"
+msgid "on"
+msgstr ""
+
+#. translators: If there are characters in your language that are not supported
+#. by Montserrat, translate this to 'off'. Do not translate into your own
+#. language.
+#: functions.php:103
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr ""
+
+#: sidebar-footer.php:12
+msgctxt "Sidebar aria label"
+msgid "Footer Sidebar"
+msgstr "Sivupalkki alhaalla"
+
+#~ msgid "Contact Info"
+#~ msgstr "Yhteystiedot"
+
+#, fuzzy
+#~ msgid "Pages:"
+#~ msgstr "Sivut:"
+
+#, fuzzy
+#~ msgid "Page"
+#~ msgstr "Sivu"
+
+#, fuzzy
+#~ msgid "#%s"
+#~ msgstr "#%s"
+
+#, fuzzy
+#~ msgid "Categories"
+#~ msgstr "Kategoriat"
+
+#, fuzzy
+#~ msgid "Tags"
+#~ msgstr "Avainsanat"
