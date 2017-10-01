@@ -89,7 +89,7 @@ if ( $blog_content->have_posts() || ! empty( $munsa_featured_pages ) ) :
 	<?php if ( $blog_content->have_posts() ) : ?>
 
 		<div id="blog-content-area" class="blog-content-area front-page-area">
-			<div class="blog-wrapper">
+			<div class="blog-wrapper-house">
 
 				<?php // Blog area title and link.
 					if( get_theme_mod( 'blog_area_title', esc_html__( 'Articles', 'munsa' ) ) || ( get_theme_mod( 'blog_area_url' ) && get_theme_mod( 'blog_area_url_text' ) ) ) :
@@ -111,30 +111,38 @@ if ( $blog_content->have_posts() || ! empty( $munsa_featured_pages ) ) :
 					endif; // End featured are title and link
 				?>
 
-				<div class="blog blog-posts-wrapper" itemscope="itemscope" itemtype="http://schema.org/Blog">
+				<div class="blog blog-posts-wrapper-house" itemscope="itemscope" itemtype="http://schema.org/Blog">
 					<?php while ( $blog_content->have_posts() ) : $blog_content->the_post(); ?>
 
 						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php hybrid_attr( 'post' ); ?>>
 
 							<?php if ( has_post_thumbnail() ) : ?>
+								<div class="entry-thumbnail">
+									<a class="post-thumbnail" href="<?php the_permalink(); ?>">
+										<?php the_post_thumbnail( 'munsa-medium', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
+									</a>
+								</div><!-- .entry-thumbnail -->
+							<?php endif; ?>
 
-								<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-									<?php the_post_thumbnail( 'munsa-smaller', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
-								</a>
+							<div class="entry-inner">
 
-							<?php endif;  ?>
+								<header class="entry-header">
+									<?php the_title( sprintf( '<h2 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+									<?php get_template_part( 'entry', 'meta' ); // Loads the entry-meta.php template. ?>
+								</header><!-- .entry-header-info -->
 
-							<header class="entry-header">
-								<?php the_title( sprintf( '<h3 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
-								<?php get_template_part( 'entry', 'meta' ); // Loads the entry-meta.php template. ?>
-							</header><!-- .entry-header -->
+								<div class="entry-summary" <?php hybrid_attr( 'entry-summary' ); ?>>
+									<?php the_excerpt(); ?>
+								</div><!-- .entry-summary -->
+
+							</div><!-- .entry-inner -->
 
 						</article><!-- #post-## -->
 
 					<?php endwhile; ?>
 				</div><!-- .blog-posts-wrapper -->
 
-			</div><!-- .blog-wrapper -->
+			</div><!-- .blog-wrapper-house -->
 		</div><!-- .blog-content-area -->
 
 	<?php

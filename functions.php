@@ -21,7 +21,6 @@
  * @return void
  */
 function house_company_theme_setup() {
-
 	// Load child theme text domain.
 	load_child_theme_textdomain( 'house-company', get_stylesheet_directory() . '/languages' );
 
@@ -30,15 +29,14 @@ function house_company_theme_setup() {
 
 	// Add child theme fonts to editor styles.
 	add_editor_style( house_company_fonts_url() );
-
 }
 add_action( 'after_setup_theme', 'house_company_theme_setup', 11 );
 
 /**
  * Enqueue scripts and styles.
  *
- * @since  1.0.0
- */
+ * @since 1.0.0
+ **/
 function house_company_scripts() {
 	// Dequeue parent fonts.
 	wp_dequeue_style( 'munsa-fonts' );
@@ -59,10 +57,10 @@ function house_company_scripts() {
 add_action( 'wp_enqueue_scripts', 'house_company_scripts', 11 );
 
 /**
-* Returns just a link to the porfolio item URL if it has been set.
-*
-* @since  1.0.0
-*/
+ * Returns just a link to the porfolio item URL if it has been set.
+ *
+ * @since  1.0.0
+ */
 function house_company_portfolio_link() {
 	$house_company_portfolio_url = get_post_meta( get_the_ID(), 'url', true );
 
@@ -70,10 +68,10 @@ function house_company_portfolio_link() {
 }
 
 /**
-* Returns a link to the porfolio item URL if it has been set.
-*
-* @since  1.0.0
-*/
+ * Returns a link to the porfolio item URL if it has been set.
+ *
+ * @since  1.0.0
+ */
 function house_company_portfolio_item_link() {
 	$house_company_portfolio_url = get_post_meta( get_the_ID(), 'url', true );
 	if ( ! empty( $house_company_portfolio_url ) ) {
@@ -118,12 +116,8 @@ function house_company_fonts_url() {
 }
 
 function house_company_logo() {
-	// Get logo url
-	if ( is_front_page() && ! is_home() ) {
-		$logo = get_stylesheet_directory_uri() . '/images/house_company_logo_front.png';
-	} else {
-		$logo = get_stylesheet_directory_uri() . '/images/house-company-logo.png';
-	}
+	// Get logo url.
+	$logo = get_stylesheet_directory_uri() . '/images/house_company_logo_front.png';
 
 	?>
 	<div id="logo-wrapper" class="logo-wrapper">
@@ -133,6 +127,9 @@ function house_company_logo() {
 }
 add_action( 'munsa_open_branding', 'house_company_logo' );
 
+/**
+ * Logos after Contact info.
+ */
 function house_company_after_contact_info() {
 	// Image one. ?>
 	<img class="work-image work-image-fi" src="<?php echo get_stylesheet_directory_uri(); ?>/images/suomalaisen-tyon-liitto-web.png" alt="Suomalaisen työn liitto">
@@ -148,6 +145,9 @@ function house_company_after_contact_info() {
 }
 add_action( 'munsa_after_contact_info', 'house_company_after_contact_info' );
 
+/**
+ * Slider in the front page.
+ */
 function house_company_slider() {
 	$k = 0;
 	$slider_imgs = array();
@@ -169,15 +169,20 @@ function house_company_slider() {
 }
 add_action( 'munsa_close_featured_content', 'house_company_slider' );
 
+/**
+ * Add Insta feed.
+ */
 function house_company_insta() {
-	get_template_part( 'template-parts/content', 'insta-feed' );
+	if ( is_page_template( 'pages/front-page.php' ) ) {
+		get_template_part( 'template-parts/content', 'insta-feed' );
+	}
 }
 add_action( 'munsa_before_footer_widgets', 'house_company_insta' );
 
 /**
  * Instagram hashtag feed.
  */
-add_filter( 'dude-insta-feed/access_token/user=2953074118', function() {
+add_filter( 'dude-insta-feed/access_token/user=2303846579', function() {
 	return esc_attr( get_theme_mod( 'insta_access_token' ) );
 } );
 

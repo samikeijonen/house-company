@@ -14,7 +14,7 @@ if ( function_exists( 'dude_insta_feed' ) && get_theme_mod( 'insta_access_token'
 		echo '<h2 class="insta-title">' . esc_html( $title ) . '</h2>';
 	endif;
 
-	$instagram_feed = dude_insta_feed()->get_user_images( '2953074118' );
+	$instagram_feed = dude_insta_feed()->get_user_images( '2303846579' );
 	foreach ( $instagram_feed['data'] as $item ) : ?>
 		<div class="insta-feed-wrapper">
 			<div class="entry-inner entry-inner-bg" style="background-image:url('<?php echo esc_url( $item['images']['standard_resolution']['url'] ); ?>');">
