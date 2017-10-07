@@ -41,6 +41,13 @@ function house_company_scripts() {
 	// Dequeue parent fonts.
 	wp_dequeue_style( 'munsa-fonts' );
 
+	// Dequeue Kivi Plugin styles.
+	wp_dequeue_style( 'kivi' );
+
+	// Dequeue Slick from Kivi Plugin, it's already loaded by theme.
+	wp_dequeue_script( 'slick' );
+	wp_dequeue_script( 'kivi' );
+
 	// Enqueue child theme fonts.
 	wp_enqueue_style( 'house-company-fonts', house_company_fonts_url(), array(), null );
 
@@ -54,7 +61,7 @@ function house_company_scripts() {
 	// Enqueue JS.
 	wp_enqueue_script( 'housecompany-settings', get_stylesheet_directory_uri() . '/js/settings.js', array( 'jquery' ), '20170915', true );
 }
-add_action( 'wp_enqueue_scripts', 'house_company_scripts', 11 );
+add_action( 'wp_enqueue_scripts', 'house_company_scripts', 20 );
 
 /**
  * Returns just a link to the porfolio item URL if it has been set.
@@ -193,6 +200,26 @@ add_filter( 'dude-insta-feed/user_images_parameters', function( $parameters ) {
 	$parameters['count'] = '8';
 	return $parameters;
 } );
+
+/**
+ * Living area.
+ */
+function house_company_living_area() {
+	$living_area = get_post_meta( get_the_ID(), '_living_area_m2', true );
+	$living_area = $living_area ? ' - ' . number_format( intval( $living_area ), 0, '.', ' ' ) . 'm<sup>2</sup>' : '';
+
+	return $living_area;
+}
+
+/**
+ * Item Price.
+ */
+function house_company_item_price() {
+	$unencumbered_price = get_post_meta( get_the_ID(), '_unencumbered_price', true );
+	$unencumbered_price = $unencumbered_price ? ' - ' . number_format( intval( $unencumbered_price ), 0, '.', ' ' ) . '&euro;' : '';
+
+	return $unencumbered_price;
+}
 
 /**
  * Customizer additions.
