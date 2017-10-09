@@ -40,7 +40,7 @@
 // Blog Posts Query.
 $blog_content = new WP_Query( apply_filters( 'munsa_blog_posts_arguments', array(
 	'post_type'      => 'post',
-	'posts_per_page' => 3,
+	'posts_per_page' => 1,
 	'no_found_rows'  => true,
 ) ) );
 
