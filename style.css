@@ -2,7 +2,7 @@
 Theme Name:  House Company
 Theme URI:   http://housecompany.fi/
 Description: Theme for housecompany.fi site.
-Version:     1.1.1
+Version:     1.1.2
 Author:      Sami Keijonen
 Author URI:  https://foxland.fi/
 Text Domain: house-company
@@ -640,7 +640,15 @@ textarea {
 	left: -32px;
 }
 
-/* Map. */
+/* Apartments. */
+.item-price {
+	display: block;
+}
+
+.kivi-item-table th {
+	width: 45%;
+}
+
 .kivi-single-item-map .map {
 	height: 600px;
 }

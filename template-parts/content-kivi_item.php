@@ -63,7 +63,7 @@
 			</div>
 
 			<div class="kivi-single-item-info">
-				<h2 class="kivi-single-item-body-header"><?php esc_html_e( 'Asunnon perustiedot', 'housecompany' ); ?></h2>
+				<h2 class="kivi-single-item-body-header"><?php esc_html_e( 'Kohteen perustiedot', 'housecompany' ); ?></h2>
 				<table class="kivi-item-table">
 					<tbody>
 						<?php view_basic_info( get_the_ID() ); ?>	
@@ -81,7 +81,7 @@
 			</div>
 
 			<div class="kivi-single-item-info">
-				<h2 class="kivi-single-item-body-header"><?php esc_html_e( 'Asunnon lis&auml;tiedot', 'housecompany' ); ?></h2>
+				<h2 class="kivi-single-item-body-header"><?php esc_html_e( 'Kohteen tiedot', 'housecompany' ); ?></h2>
 				<table class="kivi-item-table">
 					<tbody>
 						<?php view_additional_info( get_the_ID() ); ?>
@@ -90,7 +90,7 @@
 			</div>
 
 			<div class="kivi-single-item-info">
-				<h2 class="kivi-single-item-body-header"><?php esc_html_e( 'Asunnon tilat ja materiaalit', 'housecompany' ); ?></h2>
+				<h2 class="kivi-single-item-body-header screen-reader-text"><?php esc_html_e( 'Asunnon tilat ja materiaalit', 'housecompany' ); ?></h2>
 				<table class="kivi-item-table">
 					<tbody>
 						<?php view_materials_info( get_the_ID() ); ?>
@@ -99,7 +99,7 @@
 			</div>
 
 			<div class="kivi-single-item-info">
-				<h2 class="kivi-single-item-body-header"><?php esc_html_e( 'Taloyhti&ouml;', 'housecompany' ); ?></h2>
+				<h2 class="kivi-single-item-body-header screen-reader-text"><?php esc_html_e( 'Taloyhti&ouml;', 'housecompany' ); ?></h2>
 				<table class="kivi-item-table">
 					<tbody>
 						<?php view_housing_company_info( get_the_ID() ); ?>

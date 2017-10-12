@@ -216,7 +216,7 @@ function house_company_living_area() {
  */
 function house_company_item_price() {
 	$unencumbered_price = get_post_meta( get_the_ID(), '_unencumbered_price', true );
-	$unencumbered_price = $unencumbered_price ? ' - ' . number_format( intval( $unencumbered_price ), 0, '.', ' ' ) . '&euro;' : '';
+	$unencumbered_price = $unencumbered_price ? ' <span class="item-price">' . number_format( intval( $unencumbered_price ), 0, '.', ' ' ) . '&euro;</span>' : '';
 
 	return $unencumbered_price;
 }
