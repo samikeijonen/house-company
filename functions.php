@@ -222,6 +222,35 @@ function house_company_item_price() {
 }
 
 /**
+ * Mindworking script.
+ */
+function house_company_mindworking() {
+	// Bail if not in single Kivi item.
+	if ( ! is_singular( 'kivi_item' ) ) {
+		return;
+	}
+
+	// Metadata needed for the script.
+	$case_no_id = get_post_meta( get_the_ID(), '_realty_unique_no', true );
+	$shop_no_id = get_post_meta( get_the_ID(), '_supplier_supplier_id', true );
+	?>
+	<!-- Mindworking -->
+	<script>
+	MwDataLayer = [{'CaseNo': '<?php echo $case_no_id; ?>','ShopNo': '<?php echo $shop_no_id; ?>'}];
+	</script>
+	<noscript><iframe src=https://www.googletagmanager.com/ns.html?id=GTM-TDCGXPZ
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','MwDataLayer','GTM-TDCGXPZ');</script>
+	<!-- End Mindworking -->
+	<?php
+}
+add_action( 'wp_footer', 'house_company_mindworking' );
+
+/**
  * Customizer additions.
  */
 require get_stylesheet_directory() . '/inc/customizer.php';

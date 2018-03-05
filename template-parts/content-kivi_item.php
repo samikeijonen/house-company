@@ -11,7 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php hybrid_attr( 'post' ); ?>>
 
 	<?php if ( is_singular() ) : // If single. ?>
-	
+
 		<?php
 		munsa_post_thumbnail();
 
@@ -44,11 +44,11 @@
 		);
 		echo gallery_shortcode( $attr );
 		?>
-	
+
 		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '>', house_company_living_area() . house_company_item_price() . '</h1>' ); ?>
 		</header><!-- .entry-header -->
-		
+
 		<div class="entry-content" <?php hybrid_attr( 'entry-content' ); ?>>
 
 			<?php the_content(); ?>
@@ -106,7 +106,7 @@
 					</tbody>
 				</table>
 			</div>
-			
+
 		</div><!-- .entry-content -->
 
 		<?php if ( get_kivi_option( 'kivi-gmap-id' ) ) : ?>
@@ -184,28 +184,28 @@
 				<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo get_kivi_option( 'kivi-gmap-id' ); ?>&callback=initMap" async defer></script>
 			</div>
 		<?php endif; ?>
-		
+
 	<?php else : ?>
-	
+
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="entry-thumbnail">
 				<?php munsa_post_thumbnail( $post_thumbnail = 'munsa-medium' ); ?>
 			</div><!-- .entry-thumbnail -->
 		<?php endif; ?>
-		
+
 		<div class="entry-inner">
-		
+
 			<header class="entry-header">
 				<?php the_title( sprintf( '<h2 class="entry-title" ' . hybrid_get_attr( 'entry-title' ) . '><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), house_company_living_area() . house_company_item_price() . '</a></h2>' ); ?>
 				<?php get_template_part( 'entry', 'meta' ); // Loads the entry-meta.php template. ?>
 			</header><!-- .entry-header-info -->
-		
+
 			<div class="entry-summary" <?php hybrid_attr( 'entry-summary' ); ?>>
 				<?php the_excerpt(); ?>
 			</div><!-- .entry-summary -->
-			
+
 		</div><!-- .entry-inner -->
 
 	<?php endif; // End check single. ?>
-	
+
 </article><!-- #post-## -->

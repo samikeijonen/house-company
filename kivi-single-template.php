@@ -19,7 +19,7 @@ get_header(); ?>
 				comments_template();
 			endif;
 		?>
-		
+
 		<?php
 			// Previous/next post navigation.
 			the_post_navigation( array(
